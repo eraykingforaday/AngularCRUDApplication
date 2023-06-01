@@ -7,6 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,6 +22,11 @@ import { ViewEmployeeComponent } from './view-employee/view-employee.component';
     ViewEmployeeComponent
   ],
   imports: [
+    NgbModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

@@ -1,13 +1,15 @@
-import { Component, OnInit } from ‘@angular/core’;
-import { ActivatedRoute, Router } from ‘@angular/router’;
-import { HttpProviderService } from ‘../Service/http-provider.service’;
-import { WebApiService } from ‘../Service/web-api.service’;
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpProviderService } from '../Service/http-provider.service';
+import { WebApiService } from '../Service/web-api.service';
 
 @Component({
-  selector: ‘app-view-employee’,
-  templateUrl: ‘./view-employee.component.html’,
-  styleUrls: [‘./view-employee.component.scss’]
+  selector: 'app-view-employee',
+  templateUrl: './view-employee.component.html',
+  styleUrls: ['./view-employee.component.scss']
 })
+
+
 export class ViewEmployeeComponent implements OnInit {
 
   employeeId: any;
@@ -16,7 +18,7 @@ export class ViewEmployeeComponent implements OnInit {
   constructor(public webApiService: WebApiService, private route: ActivatedRoute, private httpProvider : HttpProviderService) { }
   
   ngOnInit(): void {
-    this.employeeId = this.route.snapshot.params[‘employeeId’];      
+    this.employeeId = this.route.snapshot.params['employeeId'];      
     this.getEmployeeDetailById();
   }
 
